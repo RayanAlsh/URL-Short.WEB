@@ -1,0 +1,12 @@
+.nav-link {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer; /* Add this line */
+  font-size: 18px;
+}
+
+.link-active {
+  font-weight: bold; /* Example style for active link */
+  color: hsl(0, 0%, 0%); /* Example color for active link */
+}

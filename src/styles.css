@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.body-bg {
+  background-color: #f8f9fa; /* Replace #yourColor with the desired color or gradient */
+}
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #676767;
+}

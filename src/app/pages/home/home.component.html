@@ -1,0 +1,58 @@
+<!-- home.component.html -->
+<div class="container-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row-md-6">
+          <p class="main-title">
+            Shorten your URLs with <strong>URL.S</strong>
+          </p>
+        </div>
+        <div class="row-md-6">
+          <p class="main-body">
+            Streamline your link sharing with URL.S. Our platform makes
+            shortening URLs as easy as possible. Use URL.S anonymously for quick
+            and hassle-free shortening, or sign up to save and manage your links
+            effortlessly. Experience the convenience and control with URL.S
+            today!
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="longUrl">Enter your long URL:</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="longUrl"
+                  formControlName="URL"
+                  placeholder="https://example.com"
+                  required
+                />
+              </div>
+              @if(shortenedURL){
+              <div class="col-md-12">
+                <span class="input-like">
+                  The shortened URL is:
+                  <a [href]="shortenedURL">{{ shortenedURL }}</a>
+                </span>
+              </div>
+              }
+              <button type="submit" class="btn btn-success btn-block">
+                Shorten URL
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img
+          class="hero-image"
+          src="../../../assets/images/heroImage.png"
+          alt="Image"
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+p {
+  font-family: "Tajawal", sans-serif;
+  font-style: normal;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.main-body {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.container {
+  display: flex; /* Enable flexbox for columns */
+  flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
+}
+
+.row {
+  width: 100%; /* Ensure row takes full width */
+  display: flex; /* Enable flexbox within row */
+  flex-wrap: wrap; /* Allow wrapping within row */
+}
+
+.col-md-6 {
+  display: flex; /* Enable flexbox for column content */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally (optional) */
+  justify-content: center; /* Vertically center content within column */
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Ensure padding doesn't affect column width */
+  width: 50%; /* Set default width to 50% for md screens */
+}
+
+.hero-image {
+  width: 100%; /* Make image take full width of column */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80vh; /* Limit maximum height */
+}
+
+/* Optional: Responsiveness adjustment for smaller screens */
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 100%; /* Make columns take full width on smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .hero-image {
+    max-width: 100%; /* Ensure image doesn't exceed column width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.btn-success {
+  margin-top: 10px; /* Add margin space between the button and the input */
+}
+.input-like {
+  display: inline-block;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  width: auto; /* Adjust width as needed */
+}

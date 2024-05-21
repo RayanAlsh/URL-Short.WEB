@@ -1,0 +1,40 @@
+.container-bg {
+    background-color: #f8f9fa;
+    padding: 20px; /* Add some padding for better visual spacing */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  form {
+    width: 100%; /* Full width of the column */
+    max-width: 400px; /* Maximum width for better readability */
+    display: flex;
+    flex-direction: column; /* Ensure form elements are stacked */
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .form-control {
+    width: 100%; /* Ensure inputs take full width */
+    text-align: left; /* Align text to the left for better readability */
+  }
+  
+  button[type="submit"] {
+    align-self: center; /* Center the button */
+    width: 100%; /* Full width button */
+    max-width: 200px; /* Maximum width for the button */
+    margin-top: 1rem; /* Space above the button */
+  }
+  
