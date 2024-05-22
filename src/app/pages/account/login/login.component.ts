@@ -32,6 +32,8 @@ export class LoginComponent {
       this.authService.login(this.userData.value).subscribe({
         next: (response) => {
           localStorage.setItem('token', response.token);
+
+          this.router.navigate(['dashboard']);
         },
         error: (error) => {
           // Handle login error

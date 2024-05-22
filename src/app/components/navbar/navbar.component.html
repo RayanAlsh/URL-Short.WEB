@@ -39,6 +39,21 @@
             >About</a
           >
         </li>
+        @if(isAuthenticated()){
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="dashboard"
+            routerLinkActive="link-active"
+            >Dashboard</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()" routerLinkActive="link-active"
+            >Logout</a
+          >
+        </li>
+        } @else if (!isAuthenticated()) {
         <li class="nav-item">
           <a
             class="nav-link"
@@ -47,6 +62,8 @@
             >Account</a
           >
         </li>
+        }
+
         <li class="nav-item">
           <a class="nav-link" (click)="switchLanguage()">
             <i class="bi bi-translate"></i

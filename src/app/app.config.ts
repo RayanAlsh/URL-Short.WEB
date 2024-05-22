@@ -3,7 +3,12 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
+import { AuthGuard } from './services/guards/auth-guard.service';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient()],
+  providers: [
+    provideRouter(routes),
+    provideHttpClient(),
+    AuthGuard, // Register Auth Guard here
+  ],
 };

@@ -4,24 +4,24 @@
     <div class="row">
       <div class="col-md-6">
         <div class="row-md-6">
-          <p class="main-title">
+          <p class="main-title" i18n>
             Shorten your URLs with <strong>URL.S</strong>
           </p>
         </div>
         <div class="row-md-6">
-          <p class="main-body">
-            Streamline your link sharing with URL.S. Our platform makes
-            shortening URLs as easy as possible. Use URL.S anonymously for quick
-            and hassle-free shortening, or sign up to save and manage your links
-            effortlessly. Experience the convenience and control with URL.S
-            today!
+          <p class="main-body" i18n>
+            Streamline your link sharing with <strong>URL.S</strong>. Our
+            platform makes shortening URLs as easy as possible. Use it
+            anonymously for quick and hassle-free shortening, or sign up to save
+            and manage your links effortlessly. Experience the convenience and
+            control with <strong>URL.S</strong> today!
           </p>
         </div>
         <div class="row">
           <div class="col-md-12">
             <form [formGroup]="formData" (ngSubmit)="onSubmit()">
               <div class="form-group">
-                <label for="longUrl">Enter your long URL:</label>
+                <label for="longUrl" i18n>Enter your long URL:</label>
                 <input
                   type="url"
                   class="form-control"
@@ -33,13 +33,13 @@
               </div>
               @if(shortenedURL){
               <div class="col-md-12">
-                <span class="input-like">
+                <span class="input-like" i18n>
                   The shortened URL is:
                   <a [href]="shortenedURL">{{ shortenedURL }}</a>
                 </span>
               </div>
               }
-              <button type="submit" class="btn btn-success btn-block">
+              <button type="submit" class="btn btn-success btn-block" i18n>
                 Shorten URL
               </button>
             </form>
