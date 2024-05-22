@@ -47,6 +47,7 @@
 ## Installation and usage
 ```sh
  - Make sure to have .NET 7+
+ - Make sure to have Node.js as it's crucial for angular 
  - Make sure to install SQL Server Management Studio
  - Change the appsettings.json default connection string to your own
  - The default admin account is admin@example.com , password : qwerty1234567
