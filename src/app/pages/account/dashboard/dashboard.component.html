@@ -1,1 +1,20 @@
-<p>dashboard works!</p>
+<div class="container">
+  <h1>Welcome</h1>
+  <!-- <img
+    src="../../../assets/images/logo-no-background.png"
+    alt="About Us Image"
+    class="about-us-img"
+  /> -->
+  <h4>{{ userEmail }}</h4>
+
+  <h5>Your URLs list:</h5>
+
+  <ul class="list-group">
+    @for (item of userUrls; track item) {
+    <li class="list-group-item">
+      <a [href]="item" target="_blank">{{ item }}</a>
+    </li>
+
+    } @empty { Empty list of urls }
+  </ul>
+</div>

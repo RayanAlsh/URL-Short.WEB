@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
 import { JwtDecodeService } from './jwt-decode.service';
+import { HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
@@ -22,5 +23,17 @@ export class UrlService {
     const userid = userData.payload.nameid;
     const data = { default_URL, UserId: userid }; // Create data object with default_URL and UserId
     return this.api.post('Url', data);
+  }
+
+  GetUserUrls(): Observable<any> {
+    const token = localStorage.getItem('token');
+
+    const userData = this.jwtservice.decodeJwt(token); // Retrieve UserId from localStorage
+
+    const userid = userData.payload.nameid;
+
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+
+    return this.api.getWithHeaders(`Url/${userid}`, headers);
   }
 }
